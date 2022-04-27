@@ -21,12 +21,12 @@ void setup() {
 }
 
 void loop() {
-    if(CCS811.getCO2PPM() >= 0 && CCS811.getCO2PPM() <= 499) {
+    if(CCS811.getCO2PPM() >= 0 && CCS811.getCO2PPM() <= 799) {
         digitalWrite(ledYellow, LOW);
         digitalWrite(ledRed, LOW);
         digitalWrite(ledGreen, HIGH);
         passage = 0;
-    } else if(CCS811.getCO2PPM() >= 500 && CCS811.getCO2PPM() <= 999) {
+    } else if(CCS811.getCO2PPM() >= 800 && CCS811.getCO2PPM() <= 999) {
         digitalWrite(ledYellow, HIGH);
         digitalWrite(ledRed, LOW);
         digitalWrite(ledGreen, LOW);
